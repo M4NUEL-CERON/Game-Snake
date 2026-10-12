@@ -1,0 +1,131 @@
+*{
+     margin: 0; 
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background: linear-gradient(to right, #cccccc, #999999);
+    
+}
+.wrapper{
+    width: 65vmin;
+    height: 70vmin;
+    min-width: 300px;
+    min-height: 360px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 5px;
+    background: #515258;
+}
+.game-details{
+    color: #b8c6dc;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between; 
+    
+}
+
+.play-board{
+    background:green;
+
+     width: 100%;
+     flex: 1;
+     min-height: 0;
+     display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    touch-action: none;
+}
+.play-board .food {
+   background: red;
+   border-radius: 100%;
+}
+.play-board .head{
+    background:rgb(101, 164, 7);
+     border-radius: 10%;
+
+}
+
+.game-over-overlay{
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.game-over-overlay.show{
+    display: flex;
+}
+
+.game-over-box{
+    text-align: center;
+    color: #fff;
+    padding: 24px 32px;
+    background: #293447;
+    border-radius: 8px;
+}
+
+.game-over-box h2{
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+.game-over-box .final-score{
+    margin-bottom: 16px;
+    color: #b8c6dc;
+}
+
+.restart-btn{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    background: rgb(101, 164, 7);
+    color: #fff;
+    cursor: pointer;
+}
+
+.touch-controls{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 0;
+}
+
+.touch-row{
+    display: flex;
+    gap: 6px;
+}
+
+.touch-btn{
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #293447;
+    color: #b8c6dc;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.touch-btn:active{
+    background: rgb(101, 164, 7);
+}
+
+@media (hover: none) and (pointer: coarse){
+    .touch-controls{
+        display: flex;
+    }
+}

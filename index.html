@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="public/kisspng-slither-io-pokxe9mon-gold-and-silver-snake-game-u7-shiny-snake-5a7c7a5f858024.6100187815181072315468 (1).png">
-    <title>serpiente</title>
-
+    <meta name="description" content="Clon del juego de la serpiente (Snake), hecho con HTML, CSS y JavaScript puro.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+    <title>Juego de la Serpiente</title>
 </head>
 <body>
- <div class="wrapper">
-    <div class="game-details">
-        <div class="score">score: 0</div>
-        <div class="high-score">highscore: =</div>
-    </div>
-    <div class="play-board"></div>
- </div>
-     
+    <div class="wrapper">
+        <div class="game-details">
+            <div class="score">score: 0</div>
+            <div class="high-score">highscore: 0</div>
+        </div>
+        <div class="play-board"></div>
 
-    <script src="javascript.js"></script>
+        <div class="game-over-overlay">
+            <div class="game-over-box">
+                <h2>Game Over</h2>
+                <p class="final-score"></p>
+                <button class="restart-btn">Jugar de nuevo</button>
+            </div>
+        </div>
+
+        <div class="touch-controls" aria-hidden="true">
+            <button class="touch-btn touch-up" data-dir="up" aria-label="Arriba">▲</button>
+            <div class="touch-row">
+                <button class="touch-btn touch-left" data-dir="left" aria-label="Izquierda">◀</button>
+                <button class="touch-btn touch-down" data-dir="down" aria-label="Abajo">▼</button>
+                <button class="touch-btn touch-right" data-dir="right" aria-label="Derecha">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
