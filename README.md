@@ -6,6 +6,8 @@ Clon del clásico juego de la serpiente (Snake), construido desde cero con **HTM
 
 ## 🎮 Jugar
 
+👉 **[Jugar en vivo](https://m4nuel-ceron.github.io/Game-Snake/)**
+
 ### Controles
 
 - **Escritorio:** usa las flechas (`↑ ↓ ← →`) del teclado para mover la serpiente.
